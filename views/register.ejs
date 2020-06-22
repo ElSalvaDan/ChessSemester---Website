@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> - Chess Semester</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+    <nav class="navigation_bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#register">Create Account</a></li>
+            <li><a href="/game">Game Download</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2>Register</h2>
+            <h4 id="info"></h4>
+            <form id="registerForm" action="/register" method="post">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                        tabindex="1" autofocus required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        tabindex="2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pwdConfirm">Confirm Password</label>
+                    <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                        placeholder="Confirm Password" tabindex="3" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="4"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday" tabindex="5" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <input type="number" class="form-control" id="status" name="status" value="0" disabled>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <hr>
+            <p>Go Back <a href="/">Home</a>.</p>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+
+</html>
